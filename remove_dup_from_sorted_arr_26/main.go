@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	nums := []int{1, 1, 2}
@@ -8,5 +10,17 @@ func main() {
 }
 
 func removeDuplicates(nums []int) int {
-	return 0
+	if len(nums) == 0 {
+		return 0
+	}
+
+	count := 1
+	for i := 1; i < len(nums); i++ {
+		if nums[i] != nums[i-1] {
+			nums[count] = nums[i]
+			count++
+		}
+	}
+
+	return count
 }

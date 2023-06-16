@@ -16,7 +16,7 @@ func TestRemoveDup(t *testing.T) {
 		{
 			casename: "case 1",
 			nums:     []int{1, 1, 2},
-			expected: 3,
+			expected: 2,
 		},
 		{
 			casename: "case 2",
