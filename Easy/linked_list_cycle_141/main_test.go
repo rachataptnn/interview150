@@ -35,7 +35,7 @@ func TestRemoveDupII(t *testing.T) {
 	}
 
 	for _, tc := range testcases {
-		actual := hasCycle(createLinkedList(tc.input))
+		actual := hasCycle(createCyclicLinkedList(tc.input, tc.pos))
 
 		if !reflect.DeepEqual(actual, tc.expected) {
 			t.Errorf("testcase: %s - Expected %v, but got %v", tc.casename, tc.expected, actual)
